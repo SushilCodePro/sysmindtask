@@ -4,12 +4,12 @@ const Event = () => {
     return (
         <div className="">
             <h1 className="text-lg font-bold">Welcome Sushil Gupta</h1>
-            <div className="grid grid-cols-12 gap-4 mt-2">
+            <div className="grid grid-cols-12 gap-2 mt-2">
                 <div className="lg:col-span-8 col-span-12">
                     <h1 className="text-sm">Effortlessly Schedule Public and Private Events, Share Instantly</h1>
                 </div>
-                <div className="grid grid-cols-12 lg:col-span-4 col-span-12 gap-2 ">
-                    <div className="bg-red-500 p-1 col-span-7 rounded flex justify-center items-center gap-1 hover:cursor-pointer">
+                <div className="grid grid-cols-12 lg:col-span-4 col-span-12 gap-1 ">
+                    <div className="bg-red-500 p-1 col-span-6 rounded flex justify-center items-center gap-1 hover:cursor-pointer">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-white">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -17,7 +17,7 @@ const Event = () => {
                         </div>
                         <div className="text-xs text-white">CREATE EVENTS TYPE</div>
                     </div>
-                    <div className="boder p-1 col-span-3 border rounded flex justify-center items-center gap-1 hover:cursor-pointer">
+                    <div className="boder p-1 col-span-4 border rounded flex justify-center items-center gap-1 hover:cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                         </svg>
