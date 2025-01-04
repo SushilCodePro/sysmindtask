@@ -11,7 +11,7 @@ function App() {
       <div className="">
         <Navbar />
         <div className="grid sm:grid-cols-12">
-          <div className="sm:col-span-2 border p-2 sm:block hidden">
+          <div className="sm:col-span-3 border p-2 sm:block hidden">
             <Home />
           </div>
           <div className="sm:col-span-8 border p-6">

@@ -5,10 +5,10 @@ const Event = () => {
         <div className="">
             <h1 className="text-lg font-bold">Welcome Sushil Gupta</h1>
             <div className="grid grid-cols-12 gap-4 mt-2">
-                <div className="col-span-8">
+                <div className="lg:col-span-8 col-span-12">
                     <h1 className="text-sm">Effortlessly Schedule Public and Private Events, Share Instantly</h1>
                 </div>
-                <div className="grid grid-cols-12 col-span-4 gap-2 ">
+                <div className="grid grid-cols-12 lg:col-span-4 col-span-12 gap-2 ">
                     <div className="bg-red-500 p-1 col-span-7 rounded flex justify-center items-center gap-1 hover:cursor-pointer">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-white">
@@ -38,16 +38,16 @@ const Event = () => {
             </div>
             <p className="text-sm">Create diffrent category for meetings</p>
             <div className="grid grid-cols-12 gap-4 mt-3">
-                <div className="sm:col-span-4 ">
+                <div className=" md:col-span-4 col-span-12">
                     <div className="h-2 bg-blue-400 rounded-t"></div>
                     <EventNowCard />
                 </div>
-                <div className="sm:col-span-4 ">
-                <div className="h-2 bg-purple-400 rounded-t"></div>
+                <div className="md:col-span-4 col-span-12">
+                    <div className="h-2 bg-purple-400 rounded-t"></div>
                     <EventNowCard />
                 </div>
-                <div className="sm:col-span-4 ">
-                <div className="h-2 bg-[#FFA600] rounded-t"></div>
+                <div className="md:col-span-4 col-span-12">
+                    <div className="h-2 bg-[#FFA600] rounded-t"></div>
                     <EventNowCard />
                 </div>
             </div>
@@ -68,7 +68,7 @@ const Event = () => {
                 <div className="w-2 rounded-l bg-purple-400"></div>
                 <EventUpCard />
             </div>
-            
+
 
         </div>
     )
