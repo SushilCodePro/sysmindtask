@@ -15,6 +15,7 @@ function App() {
             <Home />
           </div>
           <div className="sm:col-span-8 border p-6">
+          {/* <h1 className="text-lg font-bold">Welcome Sushil Gupta</h1> */}
             <Routes>
               <Route path="/event" element={<Event/>}/>
               <Route path="/booking" element={<Booking/>}/>
