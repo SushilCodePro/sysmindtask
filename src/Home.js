@@ -39,9 +39,17 @@ const Home = () => {
         
         navigate("/booking");
     }
+    const backHomePage=()=>{
+        setBookings(false);
+        setIntegrations(false);
+        setAvailability(false);
+        setEventOne(false);
+        
+        navigate("/"); 
+    }
     return (
             <div className="">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 hover:cursor-pointer" onClick={backHomePage}>
                     <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24"
                         strokeWidth={1.5} stroke="currentColor"

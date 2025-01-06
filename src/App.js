@@ -5,6 +5,7 @@ import Event from "./Event";
 import Availability from "./Availability";
 import Integration from "./Integration";
 import Booking from "./Booking";
+import EventForm from "./EventForm";
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
               <Route path="/booking" element={<Booking/>}/>
               <Route path="/availability" element={<Availability/>}/>
               <Route path="/integration" element={<Integration/>}/>
+              <Route path="/eventform" element={<EventForm/>}/>
             </Routes>
           </div>
         </div>
