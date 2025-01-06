@@ -45,7 +45,7 @@ const Event = ({ data }) => {
             <div className="grid grid-cols-12 gap-4 mt-3">
                 {data.map((item, index) => (
                     <div className=" md:col-span-4 col-span-12" key={index}>
-                        <div className={`h-2   rounded-t ${index%2==0? 'bg-blue-400': 'bg-[#FFA600]'}`}></div>
+                        <div className={`h-2   rounded-t ${index%2===0? 'bg-blue-400': 'bg-[#FFA600]'}`}></div>
                         <EventNowCard item={item} />
                     </div>
                 ))}
