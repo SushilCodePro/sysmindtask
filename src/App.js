@@ -6,7 +6,10 @@ import Availability from "./Availability";
 import Integration from "./Integration";
 import Booking from "./Booking";
 import EventForm from "./EventForm";
+import { useState } from "react";
 function App() {
+  const [data, setData] = useState([]);
+
   return (
     <Router>
       <div className="">
@@ -18,11 +21,11 @@ function App() {
           <div className="sm:col-span-8 border p-6">
           {/* <h1 className="text-lg font-bold">Welcome Sushil Gupta</h1> */}
             <Routes>
-              <Route path="/event" element={<Event/>}/>
+              <Route path="/event" element={<Event data={data}/>}/>
               <Route path="/booking" element={<Booking/>}/>
               <Route path="/availability" element={<Availability/>}/>
               <Route path="/integration" element={<Integration/>}/>
-              <Route path="/eventform" element={<EventForm/>}/>
+              <Route path="/eventform" element={<EventForm data={data} setData={setData}/>}/>
             </Routes>
           </div>
         </div>

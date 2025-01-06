@@ -1,4 +1,4 @@
-const EventNewCard =()=>{
+const EventNewCard =({item})=>{
     return(
         <div>
             
@@ -6,7 +6,7 @@ const EventNewCard =()=>{
                 <div className="p-2 border rounded-b shadow" >
                     
                     <div className="grid grid-cols-12 gap-1 mt-2 mb-1">
-                        <div className="col-span-8 font-bold text-xs">15 min meetings</div>
+                        <div className="col-span-8 font-bold text-xs">{item.duration} min meetings</div>
                         <div className="col-span-2 hover:cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
@@ -19,10 +19,10 @@ const EventNewCard =()=>{
                             </svg>
                         </div>
                     </div>
-                    <div className="text-xs text-justify mt-3">Ready to craft the ultimate welcome message that'll wow your customers? Read on to learn how to effortlessly start nurturing those customer connections.</div>
+                    <div className="text-xs text-justify mt-3">{item.eventDescription}</div>
                     <div className="grid grid-cols-12 gap-1 mt-3 text-xs">
-                        <div className="lg:col-span-3 col-span-6 border flex items-center justify-center rounded p-1 hover:cursor-pointer hover:bg-gray-200">Private</div>
-                        <div className="lg:col-span-3 col-span-6 border flex items-center justify-center rounded hover:cursor-pointer hover:bg-gray-200">15 min</div>
+                        <div className="lg:col-span-3 col-span-6 border flex items-center justify-center rounded p-1 hover:cursor-pointer hover:bg-gray-200">{item.visibility}</div>
+                        <div className="lg:col-span-3 col-span-6 border flex items-center justify-center rounded hover:cursor-pointer hover:bg-gray-200">{item.duration} min</div>
                         <div className="lg:col-span-5 col-span-8 border flex items-center justify-center rounded p-1 hover:cursor-pointer hover:bg-gray-200">One-On-One</div>
                         <div className="lg:col-span-1 col-span-4 flex items-center justify-end hover:cursor-point">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">

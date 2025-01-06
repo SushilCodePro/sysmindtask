@@ -1,6 +1,11 @@
 import EventUpCard from "./EventUpCard";
 import EventNowCard from "./EventNowCard";
-const Event = () => {
+import {useNavigate} from 'react-router-dom'
+const Event = ({ data }) => {
+    const navigate=useNavigate();
+    const handleCreate=()=>{
+        navigate('/eventform')
+    }
     return (
         <div className="">
             <h1 className="text-lg font-bold">Welcome Sushil Gupta</h1>
@@ -9,7 +14,7 @@ const Event = () => {
                     <h1 className="text-sm">Effortlessly Schedule Public and Private Events, Share Instantly</h1>
                 </div>
                 <div className="grid grid-cols-12 lg:col-span-4 col-span-12 gap-1 ">
-                    <div className="bg-red-500 p-1 col-span-7 rounded flex justify-center items-center gap-1 hover:cursor-pointer">
+                    <div className="bg-red-500 p-1 col-span-7 rounded flex justify-center items-center gap-1 hover:cursor-pointer" onClick={handleCreate}>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-white">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -38,7 +43,13 @@ const Event = () => {
             </div>
             <p className="text-sm">Create diffrent category for meetings</p>
             <div className="grid grid-cols-12 gap-4 mt-3">
-                <div className=" md:col-span-4 col-span-12">
+                {data.map((item, index) => (
+                    <div className=" md:col-span-4 col-span-12" key={index}>
+                        <div className={`h-2   rounded-t ${index%2==0? 'bg-blue-400': 'bg-[#FFA600]'}`}></div>
+                        <EventNowCard item={item} />
+                    </div>
+                ))}
+                {/* <div className=" md:col-span-4 col-span-12">
                     <div className="h-2 bg-blue-400 rounded-t"></div>
                     <EventNowCard />
                 </div>
@@ -49,7 +60,7 @@ const Event = () => {
                 <div className="md:col-span-4 col-span-12">
                     <div className="h-2 bg-[#FFA600] rounded-t"></div>
                     <EventNowCard />
-                </div>
+                </div> */}
             </div>
             <div className="flex justify-between mt-6">
                 <h1 className="font-bold">Upcoming Events</h1>

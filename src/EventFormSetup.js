@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 
-const EventFormSetup = () => {
-  const [data, setData] = useState([]);
-  const [formData, setFormData] = useState({
-    eventTitle: '',
-    eventDescription: '',
-    duration: '',
-    buffer: '',
-    location: '',
-    visibility: '',
-  });
-
+const EventFormSetup = ({data, setData}) => {
+    const [formData, setFormData] = useState({
+        eventTitle: '',
+        eventDescription: '',
+        duration: '',
+        buffer: '',
+        location: '',
+        visibility: '',
+      });
+      
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
